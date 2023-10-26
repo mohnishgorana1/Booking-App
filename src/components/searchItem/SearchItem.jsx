@@ -1,0 +1,9 @@
+
+
+function SearchItem() {
+  return (
+    <div>SearchItem</div>
+  )
+}
+
+export default SearchItem
