@@ -22,11 +22,14 @@ function List() {
         <div className="listWrapper">
           {/* LIST SEARCH BOX   */}
           <div className="listSearch">
+
             <h1 className="lsTitle">Search</h1>
+
             <div className="lsItem">
               <label htmlFor="">Destination</label>
               <input type="text" placeholder={destination || ""}/>
             </div>
+
             <div className="lsItem">
               <label htmlFor="">Check-in Date</label>
               <span onClick={() => setOpenDate(!openDate)}>
@@ -44,6 +47,7 @@ function List() {
                 ranges={date}
               />}
             </div>
+
             <div className="lsItem">
               <label htmlFor="">Options</label>
               <div className="lsOptionItem">
@@ -62,22 +66,25 @@ function List() {
                 <span className="lsOptionText">
                   Adult 
                 </span>
-                <input type="number" className="lsOptionInput" placeholder={options.adult}/>
+                <input type="number" min={1} className="lsOptionInput" placeholder={options.adult}/>
               </div>
               <div className="lsOptionItem">
                 <span className="lsOptionText">
                   Children
                 </span>
-                <input type="number" className="lsOptionInput" placeholder={options.children}/>
+                <input type="number" min={0} className="lsOptionInput" placeholder={options.children}/>
               </div>
               <div className="lsOptionItem">
                 <span className="lsOptionText">
                   Room
                 </span>
-                <input type="number" className="lsOptionInput" placeholder={options.room}/>
+                <input type="number" min={1} className="lsOptionInput" placeholder={options.room}/>
               </div>
             </div>
+
+            <button>Search</button>
           </div>
+
           
           {/* SEARCH RESULT */}
           <div className="listResult">
