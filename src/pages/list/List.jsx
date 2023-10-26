@@ -1,8 +1,12 @@
+import { Header, Navbar } from "../../components"
 
 
 function List() {
   return (
-    <div>List</div>
+    <div>
+      <Navbar />
+      <Header type="list" />
+    </div>
   )
 }
 
