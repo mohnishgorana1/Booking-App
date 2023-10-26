@@ -1,8 +1,11 @@
+import { Navbar } from '../../components'
 import './home.css'
 
 function Home() {
   return (
-    <div>Home</div>
+    <div>
+      <Navbar/>
+    </div>
   )
 }
 

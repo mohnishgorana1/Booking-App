@@ -5,6 +5,7 @@ import Header from './header/Header'
 import MailList from './mailList/MailList'
 import PropertyList from './propertyList/PropertyList'
 import SearchItem from './searchItem/SearchItem'
+import Navbar from './navbar/Navbar'
 
 
 export {
@@ -14,6 +15,7 @@ export {
     Header,
     MailList,
     PropertyList,
-    SearchItem
+    SearchItem,
+    Navbar
 }
 
