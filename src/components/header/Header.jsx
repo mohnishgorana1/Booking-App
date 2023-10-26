@@ -21,8 +21,8 @@ import { useNavigate } from "react-router-dom";
 
 
 function Header({ type }) {
+
   const [openDate, setOpenDate] = useState(false);
-  
   const [date, setDate] = useState([
     {
       startDate: new Date(),
@@ -38,6 +38,7 @@ function Header({ type }) {
     children: 0,
     room: 0,
   });
+
   const handleOptions = (name, operation) => {
     setOptions((prev) => {
       return {
@@ -47,11 +48,13 @@ function Header({ type }) {
     });
   };
   
+  //* search functionality
   const [destination, setDestination] = useState("")
   const navigate = useNavigate();
   const handleSearch = () => {
-    navigate('./hotels', { state: {destination, date, options }})
+    navigate('./hotels', { state: { destination, date, options } } )   // this info go to /hotels i.e list page
   }
+
   return (
     <div className="header">
       <div  className={ type === 'list' ? 'headerContainer listMode' : "headerContainer" }>
@@ -113,6 +116,7 @@ function Header({ type }) {
                     onChange={(item) => setDate([item.selection])}
                     moveRangeOnFirstSelection={false}
                     ranges={date}
+                    minDate={new Date()}
                     className="date"
                   />
                 )}
