@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom"
-import { Header, Navbar } from "../../components"
+import { Header, Navbar, SearchItem } from "../../components"
 import './List.css'
 import { useState } from "react"
 import { format } from "date-fns"
@@ -8,7 +8,7 @@ import { DateRange } from "react-date-range"
 function List() {
 
   const location = useLocation()  // grab info from header of home page of search functionality
-
+  console.log(location);
   const [destination, setDestination] = useState(location.state.destination);
   const [date, setDate] = useState(location.state.date);
   const [openDate, setOpenDate] = useState(false)
@@ -88,6 +88,12 @@ function List() {
           
           {/* SEARCH RESULT */}
           <div className="listResult">
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
 
           </div>
         </div>
